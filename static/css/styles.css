@@ -1,0 +1,240 @@
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    padding:0;
+    margin:0;
+} 
+ .dark-mode{
+     background-color:black;
+     color: white
+ }
+ 
+ .light-mode{
+     background-color: white;
+     color: black
+ }
+
+ footer{
+    display:flex;
+    justify-content: center;
+    height:20vh;
+ }
+ #disclaimer{
+     width: 60%;
+     font-size: .8rem;
+ }
+
+
+ #content{
+     display:flex;
+     flex-direction:column-reverse;
+     /* align-items: center; */
+     justify-content: center;
+     }
+
+ header{
+     background-color: inherit;
+     box-sizing: border-box;
+     height:60vh;
+     padding:0;
+     margin: 0;
+     
+ }
+
+header nav{
+    background-color: inherit;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 6vh;
+}
+
+header nav ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    
+}
+
+header nav ul li{
+    /* border: solid .3px red; */
+    margin-right: 2vh;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #af9029;
+    padding: 0 1.5vh 0 1.5vh;
+}
+
+#brand{
+    font-size: 2.5rem;
+    color: #af9029;
+    margin-left: 2%;
+}
+
+.mode-switch-light{
+    font-size: 1rem;
+     color:white;
+     padding: .5%;
+     /* padding-top: .5%; */
+     margin-top:.5%;
+     margin-bottom:.5%;
+     border: solid .5px white;
+}
+
+.mode-switch-dark{
+    font-size: 1rem;
+     color:black;
+     padding: .5%;
+     /* padding-top: .5%; */
+     margin-top:.5%;
+     margin-bottom:.5%;
+     border: solid .5px black;
+     box-shadow: 1px 1px 3px 1px;
+}
+
+#poster{
+    height: 50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#poster-text{
+font-size: 10rem;
+}
+ 
+
+main{
+display: flex;
+
+}
+
+section{
+    height:auto;
+    padding: 2%;
+}
+
+#headline{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 10%; */
+}
+
+#post-list{
+    border-left: solid 0.009px #af9029;
+    height: 30vh;
+    width: auto;
+    text-align: center;
+}
+
+#post-list ul li{
+    list-style-type: none;
+    text-align: center;
+}
+
+#post-list ul li a{
+    text-decoration: none;
+    color: grey;
+}
+.main-post {
+    text-align: center;
+    /* border-left : solid .5px #af9029; */
+}
+
+.main-post h2{
+    text-align: center;
+}
+.main-post p{
+    text-align: left;
+}
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+
+    #headline{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .main-post{
+        display: flex;
+        flex-direction: column;
+        width:95%;
+    }
+
+    #poster-text{
+        font-size: 3rem;
+        }
+
+    #post-list{
+        display: none;
+    }
+         
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    #headline{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .main-post{
+        width:95%;
+    }
+    
+    #poster-text{
+        font-size: 3rem;
+        }
+    
+        #post-list{
+        /* width: 40vw; */
+    }
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    
+    #headline{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .main-post{
+        display:flex;
+        flex-direction: column;
+        justify-items: center;
+        box-sizing: border-box;
+        width:70%;
+        padding-left:2%;
+    }
+    
+    #poster-text{
+        font-size: 7rem;
+        }
+
+    
+         
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 

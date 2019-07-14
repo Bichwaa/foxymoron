@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
+    <style>
+        /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+
+    form{
+        margin-top: 10%;
+        margin-left: 10%;
+        width:80%;
+    }
+    
+         
+ }
+
+         /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    form{
+        margin-top: 10%;
+        margin-left: 10%;
+        width:80%;
+    }
+    
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    
+    form{
+        margin-top: 10%;
+        margin-left: 40%;
+        width:20%;
+    }
+    
+         
+ }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+            <form action="" method="POST">
+                    {%csrf_token%}
+                {{form.as_p}}
+                <input type="submit" value="Log in">
+            </form>
+    </div>
+    
+</body>
+</html>

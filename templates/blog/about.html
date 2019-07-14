@@ -1,0 +1,172 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>FOXYMORON</title>
+    <script src="https://kit.fontawesome.com/c6cb20e38a.js"></script>
+
+
+    <style>
+        #about-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        #about{
+            width: 60vh;
+        }
+
+        #about-id{
+            width: 60vh;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+
+        #about-id-image{
+            height:150px;
+            width:150px;
+            border: solid 1.5px #af9029;
+            border-radius:50%;
+        }
+        #about-id-name{
+            text-align: center;
+        }
+        #about-caption{
+            text-align:left;
+            padding:4%;
+        }
+
+        #about-links{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #about-links span i{
+            font-size: 3rem;
+        }
+
+        .about-links-details{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 4% 4% 4% 4%;
+            
+        }
+        .detail{
+            color: #af9029;
+        }
+    </style>
+</head>
+<body class='light-mode'>
+    <header style="height:20vh;">
+        <nav>
+            <span id="brand">
+                F
+                <!-- <span id="mode-switch" ></span> -->
+            </span>
+            <span id="mode-switch" class='mode-switch-dark'>dark mode</span>
+            <ul>
+                <li>
+                    <a href="{% url 'blog:home' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog:about' %}">About</a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'blog:add-post' %}">Add Post</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+        
+    <main id="about-container">
+        <div id="about">
+
+            <div id="about-id">
+                <img id='about-id-image' src="{% static 'images/img.jpg' %}" alt="">
+                <h2 id="about-id-name" style="font-weight:700;">NEWTON MUSYANI</h2>
+                
+            </div>
+            <div id="about-caption" >
+                <br><br>
+                I write to express myself. I code to create.
+                <br> <br>
+                I make seriously cool websites, secure and stylish mobile and web apllications 
+                and I can make sure your online product gets the highest possible exposure online.
+                <br> <br>
+                Let's talk:
+                <br><br><br>
+            </div>
+            <div id="about-links">
+                <div class="about-links-details">
+                        <span>
+                                <i class="fas fa-phone-square"></i>
+                                <!-- &nbsp; &nbsp; -->
+                                <br>
+                                <b class="detail">+255 784 20 52 32</b>
+                            </span>
+            
+                            <span>
+                                <i class="fab fa-whatsapp-square"></i>
+                                <!-- &nbsp; &nbsp; -->
+                                <br>
+                                <b class="detail">+255 784 20 52 32</b>
+                            </span>
+                </div>
+
+                <div class="about-links-details">
+                        <span>
+                                <i class="fas fa-envelope-square"></i>
+                                <!-- &nbsp; &nbsp; -->
+                                <br>
+                                <b class="detail">morandevelopers@gmail.com</b>
+                            </span>
+            
+                            <span>
+                                    <i class="fab fa-github-square"></i>
+                                <!-- &nbsp; &nbsp; -->
+                                <br>
+                                <a href="https://github.com/Morandevs" style="text-decoration:none; color:black;">
+                                    <b class="detail">
+                                        Github &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                                </a>
+                            </span>
+                </div>
+                
+            </div>
+
+            
+
+            
+
+        </div>
+       
+    </main>
+    <!-- <hr style="width:40vw; color:#af9029"> -->
+    <br>
+    <br>
+    <footer>
+       
+    </footer>
+
+    
+    
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
