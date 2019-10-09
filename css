@@ -16,13 +16,20 @@ html,body{
  footer{
     display:flex;
     justify-content: center;
-    max-height:200px;
+    height:20vh;
  }
  #disclaimer{
      width: 60%;
      font-size: .8rem;
  }
 
+
+ #content{
+     display:flex;
+     flex-direction:column-reverse;
+     /* align-items: center; */
+     justify-content: center;
+     }
 
  header{
      background-color: inherit;
@@ -103,15 +110,42 @@ font-size: 10rem;
 }
  
 
+main{
+display: flex;
+
+}
+
 section{
     height:auto;
     padding: 2%;
 }
 
+#headline{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 10%; */
+}
 
+#post-list{
+    border-left: solid 0.009px #af9029;
+    height: 30vh;
+    width: auto;
+    text-align: center;
+}
+
+#post-list ul li{
+    list-style-type: none;
+    text-align: center;
+}
+
+#post-list ul li a{
+    text-decoration: none;
+    color: grey;
+}
 .main-post {
     text-align: center;
-    width:100%;
+    /* border-left : solid .5px #af9029; */
 }
 
 .main-post h2{
@@ -119,7 +153,6 @@ section{
 }
 .main-post p{
     text-align: left;
-    
 }
 
 
@@ -173,68 +206,23 @@ section{
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
     
+    #headline{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
     .main-post{
         display:flex;
         flex-direction: column;
         justify-items: center;
         box-sizing: border-box;
-        width:100%;
+        width:70%;
+        padding-left:2%;
     }
     
     #poster-text{
         font-size: 7rem;
-        }
-
-        .grid{
-            display: grid;
-            grid-template-columns: 100%;
-            justify-items: center;
-        }
-        
-        
-        
-        .box{
-            max-height: 200px;
-            width:60%;
-            overflow: hidden;
-            /* padding-left:10%; */
-            /* padding-right:10%; */
-            border-bottom: solid 10px #af9029;
-            transition: all 6s;
-        }
-        
-        .box:hover{
-            max-height: 8000px;
-        }
-        
-        
-        .box-full{
-            /* visibility: visible; */
-            width:60%;
-            max-height: 8000px;
-            border-bottom: solid 10px #af9029;
-        }
-        
-        .full-bg{
-            background-size:cover;
-            background-repeat: no-repeat;
-        }
-        
-        
-        #butt{
-            position: fixed;
-            right: 2vw;
-            bottom: 2vh;
-            z-index:10000;
-            padding:20px;
-            border-radius:50%;
-            background-color:#af9029;
-            box-shadow: 2px 3px 5px black;
-            cursor: crosshair;
-        }
-        
-        .invisible{
-            display: none;
         }
 
     
@@ -252,13 +240,3 @@ section{
  } 
 
 
-
-
-
-
-
-
-
-
-
- 

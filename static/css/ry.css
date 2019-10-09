@@ -1,0 +1,54 @@
+.ryan {
+  color: black;
+}
+
+.ryan {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.quoteWrapper {
+  border: solid peachpuff .5px;
+  border-radius: 50%;
+  height: 95vh;
+  width: 50vw;
+}
+
+.quoteWrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.quote {
+  margin-top: 3%;
+  padding: 13%;
+  font-weight: 700;
+  font-size: 200%;
+}
+
+.quotee {
+  display: block;
+  text-align: right;
+  margin-right: 4%;
+}
+
+.img {
+  background-color: red;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+img {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=ry.css.map */

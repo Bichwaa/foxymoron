@@ -1,0 +1,52 @@
+
+.grid{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+}
+
+
+
+.box{
+    max-height: 200px;
+    width:60%;
+    overflow: hidden;
+    /* padding-left:10%; */
+    /* padding-right:10%; */
+    border-bottom: solid 10px #af9029;
+    transition: all 6s;
+}
+
+.box:hover{
+    max-height: 8000px;
+}
+
+
+.box-full{
+    /* visibility: visible; */
+    width:60%;
+    max-height: 8000px;
+    border-bottom: solid 10px #af9029;
+}
+
+.full-bg{
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+#butt{
+    position: fixed;
+    right: 2vw;
+    bottom: 2vh;
+    z-index:10000;
+    padding:20px;
+    border-radius:50%;
+    background-color:#af9029;
+    box-shadow: 2px 3px 5px black;
+    cursor: crosshair;
+}
+
+.invisible{
+    display: none;
+}

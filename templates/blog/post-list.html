@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    {% comment %} <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">  {% endcomment %}
     <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>FOXYMORON</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!--temporary-->
+    <title>FOXYMORON-dev</title>
 </head>
 <body class='dark-mode'>
     <header>
@@ -42,46 +42,34 @@
                 
             </span>
             <span>Musings of a Tanzanian dreamer</span>
-            <hr style="width:10vw; color:#af9029">
         </div>
     </header>
         
     <main>
-        <section id="content">
-        <div id='headline'>
-                {% for post in posts %}
-                <div class="main-post">
-                    <h2>{{post.id}}. {{post.title}}</h2>
-                    <p>{{post.body | linebreaks}}</p>
-                    <span>
-                        -{{post.author}}
-                        <hr style="width:4vw; color:#af9029">
-                    </span>
-    
-                </div>
-                {% endfor %}
-                
+    <span class="invisibl"  id="butt">
+                ^
+            </span>
+    {% for post in posts %}
+    <div class="grid">
+        <div class="box">
+            <div class="main-post">
+                <h2>{{post.id}}. {{post.title}}</h2>
+
+                <p>
+                {{post.body | linebreaks}}
+                <br/>
+                <span>
+                    -{{post.author}}
+                    <hr style="width:4vw; color:#af9029">
+                </span>
+                </p>
+
             </div>
-            <div id="post-list">
-                    <ul id="old-posts">
-                        <li>
-                            <span>OLDER POSTS</span>
-                        </li>
-                        <li>
-                            <a href="#">old ones</a>
-                        </li>
-                        <li>
-                                <a href="#">old ones</a>
-                            </li>
-                            <li>
-                                    <a href="#">old ones</a>
-                                </li>
-                                <li>
-                                        <a href="#">old ones</a>
-                                    </li>
-                    </ul>
-            </div>
-        </section>
+        </div>
+    </div>
+    {% endfor %}
+
+               
     </main>
     <hr style="width:40vw; color:#af9029">
     <br>
@@ -128,7 +116,17 @@
     </footer>
 
     
+     <script>
+        
+        let paras = document.getElementsByClassName('invisible');
+
+        for(i=0;i<paras.length; i++){
+            console.log(paras.item(i));
+        }
     
+    </script>
+
     <script src="{% static 'js/index.js' %}"></script>
+   
 </body>
 </html>

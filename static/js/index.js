@@ -36,28 +36,7 @@ function switchMode(){
 }
 
 important();
-// const brand = document.getElementById('brand');
-// const headline = document.getElementById('headline');
 
 
-// if(true){
-//     const item = JSON.parse(localStorage.getItem('stu'));
-//     const student = item.posts[0];
-//     setTimeout(function(){
-//         const card = (
-//             `
-//             <div class="main-post">
-//                         <h2>1: ${student.title} </h2>
-//                         <p>
-//                             ${student.body}
-//                         </p>
-//                         <span>
-//                            ${student.author}
-//                         </span>
-//                     </div>
-//             `
-//         );
-//     headline.innerHTML = card
-//     },800)
-    
-// }
+
+// Array.prototype.slice.call(collection/nodeList)
