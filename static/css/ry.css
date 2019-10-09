@@ -70,9 +70,9 @@ img {
         align-content: center;
   }
   .quoteWrapper {
-    border-radius: 50%;
+    border-radius: 15px;
     height: 60vh;
-    width: 50vw;
+    width: 80vw;
   }
   .quoteWrapper::after {
     content: "";
