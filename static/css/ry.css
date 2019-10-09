@@ -1,3 +1,7 @@
+* {
+  font-family: 'Major Mono Display', monospace;
+}
+
 .ryan {
   color: black;
 }
@@ -29,7 +33,7 @@
   margin-top: 3%;
   padding: 13%;
   font-weight: 700;
-  font-size: 200%;
+  font-size: 150%;
 }
 
 .quotee {
@@ -50,5 +54,52 @@
 
 img {
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .ryan {
+    color: black;
+  }
+  .ryan {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .quoteWrapper {
+    border-radius: 50%;
+    height: 60vh;
+    width: 50vw;
+  }
+  .quoteWrapper::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .quote {
+    margin-top: 3%;
+    padding: 13%;
+  }
+  .quotee {
+    display: block;
+    text-align: right;
+    margin-right: 4%;
+  }
+  .img {
+    background-color: red;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: none;
+  }
+  img {
+    border-radius: 50%;
+  }
 }
 /*# sourceMappingURL=ry.css.map */
