@@ -1,7 +1,7 @@
 *{
     font-family: 'Major Mono Display', monospace;
 }
-
+@media only screen and (min-width: 600px) {
 .ryan{
     // /background-color: rgb(26, 24, 24);
     color:black;
@@ -54,6 +54,9 @@ img{
     border-radius: 50%;
 }
 
+}
+
+
 @media only screen and (max-width: 600px) {
     .ryan{
         // /background-color: rgb(26, 24, 24);
@@ -68,7 +71,7 @@ img{
     }
     
     .quoteWrapper{
-        // border: solid peachpuff .5px;
+        border: solid peachpuff .5px;
         border-radius:15px;
         height:60vh;
         width:80vw;
@@ -83,6 +86,8 @@ img{
     .quote{
         margin-top:3%;
         padding:13%;
+        font-weight:700;
+        font-size:120%;
     }
     
     .quotee{
@@ -94,12 +99,12 @@ img{
     .img{
         background-color:red;
         position:fixed;
-        top:10%;
+        bottom:5%;
         left:5%;
         height:150px;
         width:150px;
         border-radius: 50%;
-        display:none;
+        //display:none;
     }
     
     img{
