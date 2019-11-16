@@ -1,0 +1,45 @@
+* {
+  background-color: black;
+  color: white;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header div #brand {
+    font-weight: 700;
+    font-size: 200%;
+  }
+  header div #toggle {
+    color: greenyellow;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  header nav ul li {
+    display: inline;
+    padding: 0 1rem 0 1rem;
+    text-decoration: none;
+  }
+  header nav ul li a {
+    text-decoration: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*# sourceMappingURL=main.css.map */

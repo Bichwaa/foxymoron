@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post, Wish
+from .models import Post
 from .forms import PostForm, WishForm
 from django.views.generic import ListView, CreateView, TemplateView
 # Create your views here.
@@ -27,20 +27,3 @@ class PostCreateView(CreateView):
 class AboutView(TemplateView):
     template_name = 'blog/about.html'
 
-
-class RyanView(ListView):
-    allow_empty = True
-    model=Wish
-    template_name = 'blog/ryan.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['wishes'] = Wish.objects.all()
-        return context
-
-
-class WishCreateView(CreateView):
-    # model = Post
-    form_class = WishForm
-    template_name = 'blog/add-wish.html'
-    success_url = '/blog/hbd' 

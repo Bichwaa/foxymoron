@@ -46,12 +46,13 @@
     </header>
         
     <main>
-    <span class="invisibl"  id="butt">
+    <span class="invisible"  id="butt">
                 ^
             </span>
-    {% for post in posts %}
+    
     <div class="grid">
-        <div class="box">
+            {% for post in posts %}
+        <div class="box box-stub">
             <div class="main-post">
                 <h2>{{post.id}}. {{post.title}}</h2>
 
@@ -66,8 +67,9 @@
 
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
+    
 
                
     </main>
@@ -116,7 +118,7 @@
     </footer>
 
     
-     <script>
+     <script>                                                                                                                                                                                                                                                                
         
         let paras = document.getElementsByClassName('invisible');
 

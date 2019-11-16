@@ -179,6 +179,7 @@ section{
         justify-items: center;
         box-sizing: border-box;
         width:100%;
+        height:inherit;
     }
     
     #poster-text{
@@ -193,28 +194,35 @@ section{
         
         
         
-        .box{
-            max-height: 200px;
+        .box-stub{
+            height: 10%;
             width:60%;
             overflow: hidden;
             /* padding-left:10%; */
             /* padding-right:10%; */
             border-bottom: solid 10px #af9029;
-            transition: all 6s;
+            animation: shower 1s;
         }
-        
-        .box:hover{
-            max-height: 8000px;
-        }
-        
         
         .box-full{
-            /* visibility: visible; */
+            height: 100%;
             width:60%;
-            max-height: 8000px;
+            overflow: hidden;
+            /* padding-left:10%; */
+            /* padding-right:10%; */
             border-bottom: solid 10px #af9029;
+            animation: grower 4s;
         }
         
+       @keyframes grower{
+           from {height:20%;}
+           to {height:100%;}
+       }
+
+       @keyframes shower{
+        from {height:40%;}
+        to {height:10%;}
+    }
         .full-bg{
             background-size:cover;
             background-repeat: no-repeat;
